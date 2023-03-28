@@ -1,0 +1,50 @@
+
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+ 
+
+
+
+  pull_request:
+    branches: [ "main" ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run a one-line script
+        run: echo Hello from Octo Organization
+      
+      - name: Run a multi-line script
+        run:  |
+            echo Add other actions to build,
+             echo test, and deploy your project.
+
+  build-api:
+    runs-on: windows-latest
+    steps:
+      - run: echo"Building API"
+
+  
+  build-db:
+    needs: build-app
+    runs-on: windows-latest
+    steps:
+      - run: echo" Hello Windows"
+  
+  
+  package:
+    needs: [build-app, bbuild-db]
+    runs-on: macos-latest
+    steps:
+      - run: echo"Heloo MacOs"
+      
+      
