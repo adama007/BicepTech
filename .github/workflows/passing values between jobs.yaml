@@ -22,7 +22,7 @@ jobs:
     steps:
       - run: |
           echo "printing the value"
-          echo output1: ${{nedds.job_1.outputs.output1}}
+          echo output1: ${{needs.job_1.outputs.output1}}
           echo output2: ${{needs.job_1.outputs.output2}}
 
 
