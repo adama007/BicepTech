@@ -12,9 +12,9 @@ jobs:
 
     steps:
       - id: step1
-        run: echo "::set-output name=test::ImportantValue1"
+        run: echo "::set-output name={test}::{ImportantValue1}"
       - id: step2
-        run: echo "::set-output name=test::ImportantValue2"
+        run: echo "::set-output name={test}::{ImportantValue2}"
 
   job_2:
     runs-on: ubuntu-latest
