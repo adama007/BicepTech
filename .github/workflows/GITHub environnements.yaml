@@ -1,4 +1,4 @@
-name: GitHub Secrets 
+name: GitHub Secrets environment 
 on :
   workflow_dispatch :
 
@@ -12,4 +12,4 @@ jobs:
     steps:
     - name: Print Secret from environment
       run: |
-        echo "APP_SECRET: ${{ secrets.APP_SECRET }}""
+        echo "APP_SECRET: ${{ secrets.APP_SECRET }}"
