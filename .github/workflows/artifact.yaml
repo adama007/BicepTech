@@ -1,4 +1,4 @@
-name: GitHub Secrets 
+name: GitHub artifact 
 on :
   workflow_dispatch :
 
@@ -12,7 +12,7 @@ jobs:
         echo cho "Hi, I am storing this data in this file, so that I can use this in the subsequent jobs within this workflow run. I
         pload this file to GitHub storage and download from there when needed in this workflow run."> file.txt
 
-    - uses : actions/uploaded-artifact@v2
+    - uses : actions/upload-artifact@v2
       with: 
         name: file
         path: file.txt
