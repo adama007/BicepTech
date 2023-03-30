@@ -1,0 +1,10 @@
+name: Deploy Infra
+
+on: 
+  workflow_dispatch:
+    
+jobs:
+  infra-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: action/checkout@v3
