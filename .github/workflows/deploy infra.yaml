@@ -5,7 +5,7 @@ on:
 
 
 env:
-  resourceGroupName: lab
+  resourceGroupName: DefaultResourceGroup-PAR
   storageNamePrefix: labtest
     
 jobs:
