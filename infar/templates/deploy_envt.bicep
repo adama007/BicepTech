@@ -1,6 +1,6 @@
 param location string = resourceGroup().location
 
-param storageNamePrefix string = 'techtech'
+param storageNamePrefix string 
 param acr_name string = 'techsckoolacr'
 param asb_name string = 'techsckoolasb'
 param app_name string = 'techsckoolapp'
